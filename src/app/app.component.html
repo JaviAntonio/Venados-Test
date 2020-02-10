@@ -1,0 +1,27 @@
+<div id="mySidebar" class="sidebar">
+
+    <div class="card">
+        <img class="profile" src="assets/imagenes/venadosfc.png">
+        <p>Javier antonio</p>
+        <a href="Gmail">Javi_FC@Gmail.com</a>
+    </div>
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#Home">Home</a>
+    <a routerLink="/Estadisticas">Estadísticas</a>
+    <a routerLink="/jugadores">Jugadores</a>
+</div>
+
+
+<div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+
+
+
+</div>
+<h1 style="text-align: center; color: white;">Venados FC</h1>
+<div class="container main-container">
+
+    <router-outlet></router-outlet>
+
+</div>
