@@ -1,4 +1,5 @@
 {
+  "heroesUrl": "api/heroes",
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -24,3 +25,4 @@
     "strictInjectionParameters": true
   }
 }
+

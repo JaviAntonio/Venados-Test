@@ -1,0 +1,120 @@
+<h1>PARTIDOS</h1>
+
+<div class="topnav">
+    <a routerLink="/Mx">Copa Mx</a>
+    <a routerLink="/Ascenso">Ascenso Mx</a>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+
+            <th scope="col" style="text-align: center;">ENERO</th>
+
+        </tr>
+    </thead>
+    <tbody style="color: white; width: 100%;">
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">1</th>
+                <td>{{game[1].opponent}}</td>
+                <td><img src={{game[1].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[1].home_score}}</td>
+                <td>{{game[1].away_score}}</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>{{game[1].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">2</th>
+                <td>VenadosFC</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>{{game[3].away_score}}</td>
+                <td>{{game[3].home_score}}</td>
+                <td><img src={{game[3].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[3].opponent}}</td>
+                <td>{{game[3].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+    </tbody>
+</table>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+
+            <th scope="col" style="text-align: center;">FEBRERO</th>
+
+        </tr>
+    </thead>
+    <tbody style="color: white; width: 100%;">
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">1</th>
+                <td>{{game[4].opponent}}</td>
+                <td><img src={{game[4].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[4].home_score}}</td>
+                <td>{{game[4].away_score}}</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>VenadosFC</td>
+                <td>{{game[4].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">2</th>
+                <td>{{game[5].opponent}}</td>
+                <td><img src={{game[5].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[5].home_score}}</td>
+                <td>{{game[5].away_score}}</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>VenadosFC</td>
+                <td>{{game[5].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">3</th>
+                <td>{{game[6].opponent}}</td>
+                <td><img src={{game[6].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[6].home_score}}</td>
+                <td>{{game[6].away_score}}</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>VenadosFC</td>
+                <td>{{game[6].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">4</th>
+                <td>VenadosFC</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>{{game[7].away_score}}</td>
+                <td>{{game[7].home_score}}</td>
+                <td><img src={{game[7].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[7].opponent}}</td>
+                <td>{{game[7].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+        <div *ngFor="let game of games">
+            <tr>
+                <th scope="row">5</th>
+                <td>VenadosFC</td>
+                <td><img src="/assets/imagenes/venadosfc.ico" style="width: 30px; height: 30px;"></td>
+                <td>{{game[8].away_score}}</td>
+                <td>{{game[8].home_score}}</td>
+                <td><img src={{game[8].opponent_image}} style="width: 30px; height: 30px;" /></td>
+                <td>{{game[8].opponent}}</td>
+                <td>{{game[8].league}}</td>
+                <td></td>
+            </tr>
+        </div>
+
+    </tbody>
+</table>

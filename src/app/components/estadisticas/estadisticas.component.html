@@ -1,154 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<router-outlet>
 
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+</router-outlet>
+<style>
+    table {
+        border-collapse: collapse;
+        border-spacing: 8;
+        width: 100%;
+        border: 1px solid green;
+        background-color: black;
+        opacity: 70%;
+        ;
+    }
+    
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+        width: 10%;
+        border: 2cm;
+        color: white;
+        font-size: 23px;
+        font-family: helvetica;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+    
+    .cabecera,
+    th {
+        color: black;
+    }
+</style>
 
-<body>
-
-    <div class="container">
-        <h2 style="color: white;">Estadísticas</h2>
-
+<div style="overflow-x:auto;">
+    <div *ngFor="let statistics of stadistics">
         <table class="table">
-            <thead>
-                <tr>
-                    <th style="color: white;">TABLA GENERAL</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th style="color: white;">JJ</th>
-                    <th style="color: white;">DG</th>
-                    <th style="color: white;">PTS</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>
-                        <h1 style="color: white;">1</h1>
-                    </th>
-                    <th>
-                        <img class="ven" src="/assets/imagenes/venadosfc.png" width="55px">
-                    </th>
-                    <th>
-                        <h3 style="color: white;">VenadosFC.</h3>
-                    </th>
-                    <td>
-                        <h2></h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">5</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">6</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">6</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <h1 style="color: white;">2</h1>
-                    </th>
-                    <th>
-                        <img class="ven" src="/assets/imagenes/venadosfc.png" width="55px">
-                    </th>
-                    <th>
-                        <h3 style="color: white;">VenadosFC.</h3>
-                    </th>
-                    <td>
-                        <h2></h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">2</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">5</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">8</h2>
-                    </td>
+            <tr>
+                <th style="color: white;">TABLA GENERAL</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr class="cabecera">
+                <th>Posicion</th>
+                <th></th>
+                <th>Equipo</th>
+                <th>JJ</th>
+                <th>JG</th>
+                <th>JP</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>Score</th>
+                <th>Points</th>
 
-                </tr>
-                <tr>
-                    <th>
-                        <h1 style="color: white;">3</h1>
-                    </th>
-                    <th>
-                        <img class="ven" src="/assets/imagenes/venadosfc.png" width="55px">
-                    </th>
-                    <th>
-                        <h3 style="color: white;">VenadosFC.</h3>
-                    </th>
-                    <td>
-                        <h2></h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">1</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">3</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">6</h2>
-                    </td>
-                </tr>
-                <th>
-                    <h1 style="color: white;">4</h1>
-                </th>
-                <th>
-                    <img class="ven" src="/assets/imagenes/venadosfc.png" width="55px">
-                </th>
-                <th>
-                    <h3 style="color: white;">VenadosFC.</h3>
-                </th>
-                <td>
-                    <h2></h2>
-                </td>
-                <td>
-                    <h2 style="color: white;">5</h2>
-                </td>
-                <td>
-                    <h2 style="color: white;">6</h2>
-                </td>
-                <td>
-                    <h2 style="color: white;">6</h2>
-                </td>
-                <tr>
-                    <th>
-                        <h1 style="color: white;">5</h1>
-                    </th>
-                    <th>
-                        <img class="ven" src="/assets/imagenes/venadosfc.png" width="55px">
-                    </th>
-                    <th>
-                        <h3 style="color: white;">VenadosFC.</h3>
-                    </th>
-                    <td>
-                        <h2></h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">5</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">6</h2>
-                    </td>
-                    <td>
-                        <h2 style="color: white;">6</h2>
-                    </td>
-                </tr>
-            </tbody>
+            </tr>
+            <tr>
+
+                <td>{{statistics.position}}</td>
+                <td><img src={{statistics.image}} style="width: 45px; height: 45px;" /></td>
+                <td>{{statistics.team}}</td>
+                <td>{{statistics.games}}</td>
+                <td>{{statistics.win}}</td>
+                <td>{{statistics.loss}}</td>
+                <td>{{statistics.Tie}}</td>
+                <td>{{statistics.f_goals}}</td>
+                <td>{{statistics.a_goals}}</td>
+                <td>{{statistics.score_diff}}</td>
+
+            </tr>
+
         </table>
     </div>
-
-</body>
-
-</html>
-
-<router-outlet></router-outlet>
+</div>

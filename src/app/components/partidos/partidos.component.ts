@@ -2,16 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../services.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-partidos',
+  templateUrl: './partidos.component.html',
+  styleUrls: ['./partidos.component.css']
 })
-export class HeaderComponent implements OnInit {
-
-  
-  ngOnInit() {
-  }
-
+export class PartidosComponent {
   title = 'venados-Test';
   games: any[]=[];
   constructor(public json: ServicesService) {

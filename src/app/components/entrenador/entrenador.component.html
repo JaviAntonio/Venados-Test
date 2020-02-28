@@ -1,0 +1,64 @@
+<div class="topnav">
+    <a routerLink="/jugadores">Centrales</a>
+    <a routerLink="/porteros">Porteros</a>
+    <a routerLink="/delanteros">Delanteros</a>
+    <a routerLink="/Defensas">Defensas</a>
+    <a routerLink="/Entrenador">Cuerpo Tecnico</a>
+</div>
+<div class="container" *ngFor="let team of team">
+
+    <!-- Button to Open the Modal -->
+
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="getPlayer(team)">
+       
+      {{team.name}}
+  
+    </button>
+    <div class="row">
+        <div class="column" style="background-color:green; opacity: 60%;">
+            <h1 style="color: white;"></h1>
+            <h3 style="font-weight: bold; color: white;"><b></b></h3><br>
+            <h3 style="font-weight: bold; color: white;"><b></b></h3>
+
+        </div>
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">INFORMACION DEL JUGADOR</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <img src={{image}} style="width: 100px;height: 100px; ">
+                        <br>
+                        <h3>Nombre:</h3>{{name}} {{first_surname}} {{second_surname}}
+                        <br>
+                        <br>
+                        <h3>Lugar de nacimiento:</h3>{{birth_place}}
+                        <br>
+                        <br>
+                        <h3>rol:</h3>{{role}}
+                        <br>
+                        <br>
+
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

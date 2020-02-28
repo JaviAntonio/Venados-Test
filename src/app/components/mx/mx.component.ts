@@ -2,16 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../services.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-mx',
+  templateUrl: './mx.component.html',
+  styleUrls: ['./mx.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class MxComponent implements OnInit {
 
-  
   ngOnInit() {
   }
-
   title = 'venados-Test';
   games: any[]=[];
   constructor(public json: ServicesService) {
@@ -21,10 +19,12 @@ export class HeaderComponent implements OnInit {
     this.json.getJson('/games')
     .subscribe((response: any) => {
       console.log('response', response);
-      this.games= response.data.games;
+      this.games [0] = response.data.games;
     }, (error: any)  => {
       console.log('errorinternet', error);
     });
   }
 
 }
+
+

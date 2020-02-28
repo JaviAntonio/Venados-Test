@@ -1,3 +1,22 @@
 .fond {
     width: 50px;
 }
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img {
+    align-content: center;
+    padding-right: 15px;
+    padding-left: 120px;
+}
+
+#car {
+    width: 300px;
+    height: 700px;
+}
