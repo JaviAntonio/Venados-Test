@@ -1,0 +1,67 @@
+<div class="topnav">
+    <a routerLink="/jugadores">Centrales</a>
+    <a routerLink="/porteros">Porteros</a>
+    <a routerLink="/delanteros">Delanteros</a>
+    <a routerLink="/Defensas">Defensas</a>
+    <a routerLink="/Entrenador">Cuerpo Tecnico</a>
+</div>
+
+<mat-grid-list cols="3" rowHeight="2:3">
+    <mat-grid-tile *ngFor="let team of team">
+        <mat-card class="example-card">  
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{team.name}}</mat-card-title>
+              <mat-card-subtitle>{{team.position}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{team.image}}">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="getPlayer(team)">     
+                      {{team.name}}
+                    </button>                   
+          </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">INFORMACION DEL JUGADOR</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src={{image}} style="width: 100px;height: 100px; ">
+                    <br>
+                    <h3>Nombre:</h3>{{name}} {{first_surname}} {{second_surname}}
+                    <br>
+                    <br>
+                    <h3>Lugar de nacimiento:</h3>{{birth_place}}
+                    <br>
+                    <br>
+                    <h3>Peso:</h3>{{weight}}
+                    <br>
+                    <br>
+                    <h3>Estatura:</h3>{{height}}
+                    <br>
+                    <br>
+                    <h3>Posición:</h3>{{position}}
+                    <br>
+                    <br>
+                    <h3>Numero:</h3>{{number}}
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+

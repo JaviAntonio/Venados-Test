@@ -1,0 +1,46 @@
+<h1>PARTIDOS</h1>
+
+<div class="topnav">
+    <a routerLink="/Mx">Copa Mx</a>
+    <a routerLink="/Ascenso">Ascenso Mx</a>
+</div>
+
+<table class="table table-hover table-light" style="width: 90%; ">
+    <thead style="color: black;">
+      <tr>
+     
+        <th scope="col">ENERO</th>
+       
+      </tr>
+  <table class="table table-borderless table-active" style="width: 75%;">
+    <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let game of games; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{game[0].opponent}}</td>
+      <td>
+        <img src={{game[0].opponent_image}} style="width: 50px; height: 50px;">
+        
+      </td>
+      <td>{{game[0].home_score}}</td>
+        <td>{{game[0].away_score}}</td>
+        <td><img src="/assets/imagenes/venadosfc.ico" style="width: 40px; height: 48px;"></td>
+        <td>VenadosFC</td>
+    </tr>
+    <tr *ngFor="let game of games; index as i">
+      <th scope="row">{{ i + 2 }}</th>
+      <td>VenadosFC</td>
+        <td><img src="/assets/imagenes/venadosfc.ico" style="width: 40px; height: 48px;"></td>
+        <td>{{game[2].away_score}}</td>
+        <td>{{game[2].home_score}}</td>
+        <td><img src={{game[2].opponent_image}} style="width: 50px; height: 50px;"></td>
+        <td>{{game[2].opponent}}</td>
+    </tbody>
+  </table>

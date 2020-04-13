@@ -1,0 +1,89 @@
+.topnav {
+    margin-left: 95px;
+    width: 80%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    opacity: 80%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 68px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid blue;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid red;
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.column {
+    float: center;
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    height: 5cm;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.modal-body {
+    text-align: center;
+    
+}
+.btn{
+    margin-left: 2px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.jugador{
+    width: 100px;
+    height: 100px;
+}
+.example-card {
+    margin-top: 50px;
+    margin-left: 100px;
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/imagenes/venadosfc.png');
+    background-size: cover;
+  }
+
+  img.mat-card-image{
+      min-height: 400px;
+      max-height: 400px;
+  }

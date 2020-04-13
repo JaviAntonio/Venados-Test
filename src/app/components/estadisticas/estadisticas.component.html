@@ -1,0 +1,37 @@
+
+<h1 style="margin-left: 110px ;">TABLA GENERAL</h1>
+<table class="table table-striped" style="width: 90%; margin-left: 110px;">
+    <thead>
+    <tr>
+
+      <th scope="col">posicion</th>
+      <th scope="col">Club</th>
+      <th scope="col">Equipo</th>
+      <th scope="col">JJ</th>
+      <th scope="col">JG</th>
+      <th scope="col">JP</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+      <th scope="col">GA</th>
+      <th scope="col">ScoreDif</th>
+      <th scope="col">points</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let statistics of stadistics;index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td><img src={{statistics.image}} style="width: 45px; height: 45px;"></td>
+      <td>{{statistics.team}}</td>
+      <td>{{statistics.games}}</td>
+      <td>{{statistics.win}}</td>
+      <td>{{statistics.loss}}</td>
+      <td>{{statistics.tie}}</td>
+      <td>{{statistics.f_goals}}</td>
+      <td>{{statistics.a_goals}}</td>
+      <td>{{statistics.score_diff}}</td>
+      <td>{{statistics.points}}</td>
+     
+    </tr>
+    </tbody>
+  </table>
